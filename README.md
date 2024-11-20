@@ -211,9 +211,11 @@ GET /api/getAllUsers
 
 ---
 
+
+
 ### 5. **Update User Status**
 
--- **URL**: `/api/updateStatus`
+- **URL**: `/api/updateStatus`
 - **Method**: `PUT`
 - **Query Parameters**: `id`, `status`
 - **Description**: Updates the status of a user to either **active** or **inactive**.
