@@ -36,7 +36,42 @@ This is a Spring Boot-based User Management application that allows you to manag
 
 3. **Access the Application**:
    The application will be running at [http://localhost:8080](http://localhost:8080).
+---
+### How to Run the Application Locally Without Docker Compose
 
+If you prefer to run the application locally without using `docker-compose`, you can set up the required services manually using Docker commands:
+
+1. **Run Redis**:
+   ```bash
+   docker run --name redis -d -p 6379:6379 redis
+   ```
+
+2. **Run PostgreSQL**:
+   ```bash
+   docker run --name postgres-container -e POSTGRES_USER=postgresql -e POSTGRES_PASSWORD=postgresql_password -e POSTGRES_DB=users -p 5432:5432 -d postgres
+   ```
+
+3. **Start the Spring Boot Application**:
+   With Redis and PostgreSQL running, start the Spring Boot application locally by running:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+   Ensure your `application.properties` or environment variables are configured to connect to the locally running Redis and PostgreSQL instances.
+---
+
+### Tests
+
+The project includes unit tests to ensure the reliability of key services:
+
+1. **Statistics Service Test**:
+    - Location: `src/test/java/com/example/usermanagement/StatisticsServiceTest.java`
+    - Description: Tests the functionality of the statistics service, including user analytics and performance metrics.
+
+2. **User Service Test**:
+    - Location: `src/test/java/com/example/usermanagement/UserServiceTest.java`
+    - Description: Validates user-related operations such as creation, updates, and retrieval.
+
+---
 ---
 
 ## API Endpoints
