@@ -5,7 +5,7 @@ COPY src ./src
 # Build the project
 RUN mvn clean package -DskipTests
 
-FROM eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 COPY --from=build /app/target/user-management-0.0.1-SNAPSHOT.jar app.jar
