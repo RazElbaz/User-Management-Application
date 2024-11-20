@@ -22,7 +22,7 @@ This is a Spring Boot-based User Management application that allows you to manag
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/RazElbaz/User-Management-Application.git
-   cd User-Management-Application
+   cd User-Management-Application/user-management
    ```
 
 2. **Build and Start the Application using Docker**:
