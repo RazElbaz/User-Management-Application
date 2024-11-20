@@ -72,7 +72,6 @@ The project includes unit tests to ensure the reliability of key services:
     - Description: Validates user-related operations such as creation, updates, and retrieval.
 
 ---
----
 
 ## API Endpoints
 
